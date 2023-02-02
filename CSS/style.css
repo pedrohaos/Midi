@@ -1,0 +1,61 @@
+@import url("/CSS/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --azul-degrade: linear-gradient(45deg, #87CEFA 50%, #1E90FF );
+    --cor-do-midi: linear-gradient(135deg, #DCDCDC, #C0C0C0);
+    --cor-de-fundo-dos-botoes: #F0F0F0;
+    --cor-das-letras-dos-botoes: #DC143C;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--azul-degrade);
+}
+
+.titulo{
+    color: var(--cor-de-fundo-dos-botoes);
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.midi{
+    background: var(--cor-do-midi);
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 10px 10px 1px 8px #808080;
+}
+
+.botoes{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 10px;
+}
+
+.botoes button{
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--cor-de-fundo-dos-botoes);
+    color: var(--cor-das-letras-dos-botoes);
+    font-weight: 700;
+    font-size: 40px;
+    box-shadow: 5px 5px 1px 1px #808080;
+}
+
+.tecla.ativa,
+.tecla:active{
+    background-color: var(--cor-das-letras-dos-botoes);
+    color: var(--cor-de-fundo-dos-botoes);
+    border-top: 5px solid #DC143C;
+    border-left: 5px solid #DC143C;
+    box-shadow: inset 2px 2px 1px 1px #B22222;
+    transition: .2s;
+}
